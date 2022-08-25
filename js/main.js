@@ -4,6 +4,7 @@ const cancelBtn = document.querySelector('.fas')
 const alertMsg = document.querySelector('.msg')
 
 
+let counter = 0
 
 
 console.log(alertMsg);
