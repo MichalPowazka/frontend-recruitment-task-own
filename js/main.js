@@ -4,18 +4,23 @@ const cancelBtn = document.querySelector('.fas')
 const alertMsg = document.querySelector('.msg')
 const storage = window.localStorage
 
-// read and try more about local storage , now doesn't work but It's good solution
-let counter = 0
-let counterValue
+//working 
+let counter = localStorage.getItem("counter") || 0;
 
 
-console.log(alertMsg);
+
 
 const openPopup = () => {
     popup.style.display ='flex'
     counter++
     alertMsg.textContent = `${counter} times`
-    localStorage.setItem("counterValue", counter)
+    localStorage.setItem("counter", counter)
+    console.log(counter);
+
+    if(counter>5){
+        //display here button
+    }
+
 }
 
 const closePopup = () => {
@@ -28,7 +33,7 @@ const click = (e) => {
     }
 }
 
-//testing data saving
+
 
 
 btn.addEventListener('click', openPopup)
