@@ -1,14 +1,12 @@
-const btn = document.querySelector('.section__content-btn')
+const btnIcon = document.querySelector('.section__content-btn')
 const popup = document.querySelector('.popup')
 const cancelBtn = document.querySelector('.fas')
 const alertMsg = document.querySelector('.msg')
-const storage = window.localStorage
+const body = document.body
+const resetBtn = document.querySelector('.alert__content-reset')
 
 //working 
 let counter = localStorage.getItem("counter") || 0;
-
-
-
 
 const openPopup = () => {
     popup.style.display ='flex'
@@ -16,26 +14,32 @@ const openPopup = () => {
     alertMsg.textContent = `${counter} times`
     localStorage.setItem("counter", counter)
     console.log(counter);
-
-    if(counter>5){
-        //display here button
+    
+    if( counter > 5 ) {
+        resetBtn.style.display = 'block'
+    } else {
+        resetBtn.style.display = 'none'
     }
-
 }
 
 const closePopup = () => {
     popup.style.display ='none'
 }
 
-const click = (e) => {
-    if(e.target == popup ) {
+const closeOnClick = (e) => {
+    if(e.target == popup || e.target == document.body) {
         closePopup();
     }
 }
 
+const counterReset = () => {
+    counter = 0 ;
+    alertMsg.textContent = `${counter} times`
+}
 
 
-
-btn.addEventListener('click', openPopup)
+btnIcon.addEventListener('click', openPopup)
 cancelBtn.addEventListener('click', closePopup)
-popup.addEventListener('click', click)
+popup.addEventListener('click', closeOnClick)
+document.body.addEventListener('click', closeOnClick)
+resetBtn.addEventListener('click',counterReset)
