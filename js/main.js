@@ -5,7 +5,7 @@ const alertMsg = document.querySelector('.msg')
 const body = document.body
 const resetBtn = document.querySelector('.alert__content-reset')
 
-//working 
+
 let counter = localStorage.getItem("counter") || 0;
 
 const openPopup = () => {
@@ -13,7 +13,6 @@ const openPopup = () => {
     counter++
     alertMsg.textContent = `${counter} times`
     localStorage.setItem("counter", counter)
-    console.log(counter);
     
     if( counter > 5 ) {
         resetBtn.style.display = 'block'
@@ -34,12 +33,12 @@ const closeOnClick = (e) => {
 
 const counterReset = () => {
     counter = 0 ;
-    alertMsg.textContent = `${counter} times`
+    alertMsg.textContent = `${counter} times ( restarted )`
 }
 
 
 btnIcon.addEventListener('click', openPopup)
 cancelBtn.addEventListener('click', closePopup)
 popup.addEventListener('click', closeOnClick)
-document.body.addEventListener('click', closeOnClick)
+body.addEventListener('click', closeOnClick)
 resetBtn.addEventListener('click',counterReset)

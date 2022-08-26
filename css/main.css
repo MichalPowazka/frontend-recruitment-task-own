@@ -103,7 +103,7 @@ body button::before, body button::after {
       -ms-flex-align: center;
           align-items: center;
 }
-.wrapper .alert__content {
+.wrapper .popup .alert__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -120,27 +120,27 @@ body button::before, body button::after {
   position: relative;
   padding-left: 95px;
 }
-.wrapper .alert__content-title {
+.wrapper .popup .alert__content-title {
   padding: 56px 0px 24px 0;
   font-size: 42px;
   line-height: 120%;
 }
-.wrapper .alert__content-text {
+.wrapper .popup .alert__content-text {
   font-weight: 300;
   font-size: 16px;
   line-height: 150%;
 }
-.wrapper .alert__content-text span {
+.wrapper .popup .alert__content-text span {
   font-weight: bold;
 }
-.wrapper .alert__content-icon {
+.wrapper .popup .alert__content-icon {
   position: absolute;
   top: 36px;
   right: 36px;
   cursor: pointer;
   padding: 10px;
 }
-.wrapper .alert__content-reset {
+.wrapper .popup .alert__content-reset {
   bottom: 47.5px;
   right: 46px;
   position: absolute;
@@ -159,7 +159,232 @@ body button::before, body button::after {
   transition: box-shadow 0.3s;
   transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
 }
-.wrapper .alert__content-reset:hover {
+.wrapper .popup .alert__content-reset:hover {
   -webkit-box-shadow: #523b2f 0px 5px 15px;
           box-shadow: #523b2f 0px 5px 15px;
+}
+
+@media (max-width: 1440px) {
+  .wrapper {
+    width: 1100px;
+    height: 730px;
+  }
+  .wrapper .section {
+    padding: 60px 0 0 142px;
+  }
+  .wrapper .section__img {
+    width: 460px;
+    height: 260px;
+    background-image: url("/images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1394.jpg");
+  }
+  .wrapper .section__content {
+    width: 290px;
+    height: 190px;
+    margin-left: 75px;
+  }
+  .wrapper .section__content-title {
+    font-size: 32px;
+    margin-bottom: 18px;
+  }
+  .wrapper .section__content-text {
+    width: 310px;
+    height: 94px;
+    margin-bottom: 22px;
+    font-size: 14px;
+  }
+  .wrapper .section__content-btn {
+    font-size: 14px;
+  }
+  .wrapper .popup .alert__content {
+    width: 750px;
+    height: 180px;
+    padding-left: 85px;
+  }
+  .wrapper .popup .alert__content-title {
+    font-size: 40px;
+  }
+  .wrapper .popup .alert__content-text {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+  }
+  .wrapper .popup .alert__content-text span {
+    font-weight: bold;
+  }
+  .wrapper .popup .alert__content-icon {
+    top: 24px;
+    right: 24px;
+  }
+  .wrapper .popup .alert__content-reset {
+    bottom: 20px;
+  }
+}
+@media (max-width: 1200px) {
+  .wrapper {
+    width: 992px;
+    height: 700px;
+  }
+  .wrapper .section {
+    padding: 50px 0 0 120px;
+  }
+  .wrapper .section__img {
+    width: 420px;
+    height: 250px;
+    background-image: url("/images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1002.jpg");
+  }
+  .wrapper .section__content {
+    width: 280px;
+    height: 180px;
+    margin-left: 65px;
+  }
+  .wrapper .section__content-title {
+    font-size: 28px;
+  }
+  .wrapper .section__content-text {
+    width: 290px;
+    height: 72px;
+    margin-bottom: 24px;
+    font-size: 12px;
+  }
+  .wrapper .popup .alert__content {
+    height: 160px;
+  }
+  .wrapper .popup .alert__content-title {
+    font-size: 28px;
+    padding-top: 45px;
+  }
+  .wrapper .popup .alert__content-text {
+    font-size: 12px;
+  }
+  .wrapper .popup .alert__content-icon {
+    top: 15px;
+    right: 15px;
+  }
+  .wrapper .popup .alert__content-reset {
+    padding: 10px 30px;
+    bottom: 35px;
+    font-size: 12px;
+  }
+  .wrapper .popup .alert__content-reset:hover {
+    -webkit-box-shadow: #523b2f 0px 3px 10px;
+            box-shadow: #523b2f 0px 3px 10px;
+  }
+}
+@media (max-width: 992px) {
+  .wrapper {
+    width: 768px;
+    height: 700px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .wrapper .section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0;
+  }
+  .wrapper .section__img {
+    margin-top: 50px;
+    width: 350px;
+    height: 200px;
+    background-image: url("/images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_784.jpg");
+  }
+  .wrapper .section__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 200px;
+    height: 160px;
+    margin-top: 45px;
+    margin: 50px 0;
+  }
+  .wrapper .section__content-title {
+    font-size: 26px;
+    margin-bottom: 14px;
+  }
+  .wrapper .section__content-text {
+    width: 290px;
+    height: 72px;
+    margin-bottom: 30px;
+  }
+  .wrapper .section__content-btn {
+    font-size: 12px;
+  }
+  .wrapper .popup .alert__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 600px;
+    height: 260px;
+    padding: 0;
+  }
+  .wrapper .popup .alert__content-title {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  .wrapper .popup .alert__content-text {
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  .wrapper .popup .alert__content-reset {
+    position: static;
+  }
+}
+@media (max-width: 768px) {
+  .wrapper {
+    width: 375px;
+    height: 600px;
+  }
+  .wrapper .section__img {
+    width: 320px;
+    height: 180px;
+    background-image: url("/images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_480.jpg");
+  }
+  .wrapper .popup .alert__content {
+    width: 320px;
+    height: 300px;
+  }
+  .wrapper .popup .alert__content-title {
+    padding: 0;
+    margin-bottom: 30px;
+    font-size: 28px;
+  }
+  .wrapper .popup .alert__content-text {
+    margin-bottom: 40px;
+    padding: 0;
+  }
+  .wrapper .popup .alert__content-reset {
+    position: static;
+  }
 }/*# sourceMappingURL=main.css.map */
