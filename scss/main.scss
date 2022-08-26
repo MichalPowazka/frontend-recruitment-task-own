@@ -9,18 +9,12 @@
 }
 body {
     background: #E5E5E5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     color: $dark;
     
-    button::before, button::after  {
-        display: block;
-        position: absolute;
-        content: '';
-        transition: .5s;
-        z-index: -1;
-    }
     
     
 }
@@ -31,25 +25,19 @@ body {
     background-color: #FFF;
     
 
-
     .section {
         display: flex;
         align-items: center;
         padding: 96px 0 0 230px;
         position: absolute;
         
-
-
         &__img{
             width: 505px;
             height: 330px;
             background-image: url('/images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1400.jpg');
             background-position: center;
-            background-size: cover;
-            
+            background-size: cover;   
         }
-
-
 
         &__content {
             width: 380px;
@@ -85,9 +73,7 @@ body {
                 line-height: 100%;
                 color: #FFF;
                 cursor: pointer;
-            }
-
-            
+            }            
         }
     }
 
@@ -158,12 +144,8 @@ body {
                     &:hover {
                         box-shadow: #523b2f 0px 5px 15px;
                     }    
-                
-                }
-                
-            }
-    
-            
+                }   
+            }  
         }
     }
 
@@ -286,9 +268,7 @@ body {
                     height: 72px;
                     margin-bottom: 24px;
                     font-size: 12px;
-                }
-    
-                
+                }   
             }
         }
 
@@ -323,17 +303,9 @@ body {
                             box-shadow: #523b2f 0px 3px 10px
                         }
                     }
-
-
                 }
-        
-               
-        
             }
         }
-    
-        
-    
     }
 
 }
